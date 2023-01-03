@@ -8,6 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json({ extended: true }));
 
+mongoose.set('strictQuery', true);
 
 const PORT = process.env.PORT || 5000;
 const URL = process.env.MONGO_URI;
